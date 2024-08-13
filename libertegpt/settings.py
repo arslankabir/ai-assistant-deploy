@@ -15,6 +15,8 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+import nltk
+nltk.data.path.append('/var/www/liberte/ai-assistant-deploy/nltk_data')
 
 
 # Quick-start development settings - unsuitable for production
