@@ -28,10 +28,18 @@ nltk.data.path.append('/var/www/liberte/ai-assistant-deploy/nltk_data')
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG','False') == True
+env = environ.Env(
+    DEBUG=(bool, False)
+)
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '127.0.0.1').split(',')
+environ.Env.read_env()
 
+DEBUG = env('DEBUG')
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS')
+DATABASES = {
+    'default': env.db(),
+}
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # Application definition
 
