@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fwxp6l20$80w62x^r^$+)3qw+@54p-r+h3oykqq+pps471hqou'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['libertecoin.com', 'www.libertecoin.com']
 
 
 # Application definition
