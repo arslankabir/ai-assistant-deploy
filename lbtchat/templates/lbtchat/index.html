@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/card-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/popup.css' %}">
+
+    <style>
+        .showcase__area .showcase__content {
+            width: 100% !important;
+            margin: auto;
+        }
+
+        .showcase__area img {
+            border-radius: 0px;
+        }
+
+        .showcase__image::before {
+            border-radius: 0px;
+        }
+
+        .showcase__image {
+            border-radius: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+        <img src="{% static 'image/lbt-logo-icon2.gif' %}" alt="Site Logo">
+    </div>
+
+    <!-- Page Header -->
+    <header class="header__area-3">
+        <div class="header__inner-3">
+            <div class="header__logo-2">
+                <a href="https://mainnet.projectliberte.io/" class="logo-light"><img src="{% static 'image/logo.png' %}"
+                        alt="Site Logo"></a>
+            </div>
+            <div class="header__nav-2">
+                <ul class="main-menu-3">
+                    <li><a href="https://mainnet.projectliberte.io/" class="has-dropdown">Home</a></li>
+                    <li><a>Explore</a>
+                        <ul class="main-dropdown">
+                            <li><a
+                                    href="https://mainnet.projectliberte.io/lbt/index.php/lab/explorer/discover">Discover</a>
+                            </li>
+                            <li><a href="https://mainnet.projectliberte.io/dashboard/v1"> Dashboards</a></li>
+                            <li><a class="has-dropdown"> Development</a>
+                                <ul class="sub-dropdown">
+                                    <li><a
+                                            href="https://mainnet.projectliberte.io/lbt/index.php/lab/development/IDE">IDE</a>
+                                    </li>
+                                    <li><a
+                                            href="https://mainnet.projectliberte.io/lbt/index.php/lab/development/etherscan">Ether
+                                            Scan</a></li>
+                                    <li><a
+                                            href="https://mainnet.projectliberte.io/lbt/index.php/lab/development/solscan">Solana
+                                            Scan</a></li>
+                                    <li><a
+                                            href="https://mainnet.projectliberte.io/lbt/index.php/lab/development/bscscan">Binance
+                                            Scan</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://blogs.alpha2-inc.com/"> News &amp; Resources</a></li>
+                            <li><a href="../foundation.php">Foundation</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/whitepaperlbt.pdf"> Whitepaper</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/lbt-specials/jobportal.html"> Jobportal</a>
+                            </li>
+                            <li><a
+                                    href="https://mainnet.projectliberte.io/lbt-specials/marketplace.html">Marketplace</a>
+                            </li>
+                            <li><a href="https://mainnet.projectliberte.io/lbt-specials/professional-services.html">Professional
+                                    Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-dropdown">Functionalities</a>
+                        <ul class="main-dropdown">
+                            <li><a href="https://mainnet.projectliberte.io/Aiinvestment.php">AI Investment</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/BuyandSell.php">Tradesphere</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/Freelance.php">Freelance</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/jobportal.php">Job Portal</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/LifeInsurance.php">Life Insurance</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/Socialmedia.php">Social Media</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/WalkandEarn.php">Walk and Earn</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/playandearn.php">Play and Earn</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/nftmarketplace.php">NFT marketplace</a></li>
+                            <li><a href="https://mainnet.projectliberte.io/referandearn.php">Refer and earn</a></li>
+                            <li><a href="">QR code</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://mainnet.projectliberte.io/lbt/index.php/token">Token</a></li>
+                    <li><a class="has-dropdown">NFTs</a>
+                        <ul class="main-dropdown">
+                            <li><a href="../nft-yacht/index.html">Liberte Princess</a></li>
+                            <li><a href="../currencynft/index.html">Currency NFT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="header__nav-icon-3">
+                <button class="search-icon d-none" id="search_icon"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="search-icon d-none" id="search_close"><i class="fa-solid fa-xmark"></i></button>
+
+                <a data-bs-toggle="modal" data-bs-target="#joinLiberte">
+                    <button class="btn" type="button">Join Liberte</button>
+                </a>
+
+                <button id="open_offcanvas" class="open_offcanvas d-block d-md-none text-white fs-1 ms-4"
+                    type="button"><i class="bi bi-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero_section">
+        <div class="container text-center">
+            <div class="sliderWrapper row">
+                <div class="col-2">
+                    <div class="slider slider1">
+                        <div><img src="{% static 'image/banner/icon1.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon2.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon3.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon4.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon5.png' %}" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="slider slider2">
+                        <div><img src="{% static 'image/banner/icon6.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon7.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon8.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon9.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon10.png' %}" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="slider slider3">
+                        <div><img src="{% static 'image/banner/icon11.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon12.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon13.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon14.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon15.png' %}" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="slider slider4">
+                        <div><img src="{% static 'image/banner/icon16.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon17.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon18.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon19.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon20.png' %}" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="slider slider5">
+                        <div><img src="{% static 'image/banner/icon21.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon2.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon3.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon4.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon5.png' %}" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="slider slider6">
+                        <div><img src="{% static 'image/banner/icon9.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon11.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon17.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon8.png' %}" alt=""></div>
+                        <div><img src="{% static 'image/banner/icon19.png' %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <h1>Welcome to the Liberte</h1>
+            <h5>The Future of Web3 and AI..</h5>
+            <p>Sprinkle a little magic on your day. Connect your tools, <br class="d-none d-md-block">
+                and take your daily workflow to the next level.
+            </p>
+            <div class="extension_search text-center">
+                <input type="text" name="" class="text-white"
+                    placeholder="🔎 by typing or 🎤 in any language ⚡️ by AI.." id="home_search_to_modal"
+                    onkeypress="handleInputKeyPress(event)">
+                <div class="search_btn">
+                    <button type="button" onclick="sendMessage()">⌘</button>
+                    <button type="button" onclick="startVoiceRecognition()">🎤</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="home_chat_box">
+            <i class="bi bi-x-lg" id="close_home_modal"></i>
+            <div class="chat-container" data-user-img="{% static 'image/user.png' %}"
+                data-logo-img="{% static 'image/logo_lbt.png' %}">
+                <div class="branding">Liberte AI Assistant ⚡</div>
+                <div class="response-container" id="response-container">
+                    <div class="watermark">Project Liberté</div>
+                    <!-- Responses will appear here -->
+                </div>
+                <div class="input-container">
+                    <textarea id="user-input" placeholder="🔎 by typing or 🎤 in any language ⚡️ by AI.."
+                        onkeypress="handleKeyPress(event)"></textarea>
+                    <button class="send-button" onclick="sendMessage()">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button class="mic-button" onclick="startVoiceRecognition()">
+                        <i class="bi bi-mic-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="brand__area">
+        <div class="row">
+            <div class="col-xxl-12">
+                <h2 class="brand__title-3 title-anim">FUTURE COLLABORATIONS: BRANDS TO PARTNER WITH LBT</h2>
+                <div class="owl-carousel owl-theme" id="brands">
+                    <img src="{%static 'image/brand/1.png'%}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/1.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/2.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/3.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/4.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/5.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/6.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/7.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/8.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/9.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/10.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/11.png' %}" alt="Brand Logo">
+                    <img src="{% static 'image/brand/12.png' %}" alt="Brand Logo">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section token" id="token">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{% static 'image/token-img.png' %}" class="token__img" alt="">
+                </div>
+                <div data-aos="fade-left" class="col-lg-6 token__animated-content">
+                    <div class="section-header section-header--tire section-header--small-margin">
+                        <h5 class="text-primary mb-3">About token</h5>
+                    </div>
+                    <div class="token__desc">
+                        <div class="token__desc-title">Project Liberte : Liberte Coin ( LBT ) </div>
+                        <div class="token__desc-text">
+                            <p>
+                                LBT token is the cornerstone of this innovative ecosystem, providing utility and value
+                                across a variety of integrated services.
+                            </p>
+                            <p>
+                                The LBT token is designed to be a versatile and functional digital asset that
+                                facilitates and incentivizes user engagement within the Project Liberte platform. It
+                                enables seamless transactions, rewards participation, and supports the diverse
+                                functionalities of the ecosystem.
+                            </p>
+                            <div class="token__purpose">
+                                <h5 class="text-white">Purpose</h5>
+                                <ul>
+                                    <li><i class="bi bi-check-square-fill"></i> LBT tokens are awarded for various
+                                        activities within the platform, such as health tracking, job searching, and
+                                        social media engagement.</li>
+                                    <li><i class="bi bi-check-square-fill"></i> These tokens can be redeemed for
+                                        services, products, and exclusive benefits within the ecosystem.</li>
+                                    <li><i class="bi bi-check-square-fill"></i> LBT facilitates secure, fast, and
+                                        transparent transactions across the platform’s diverse services.</li>
+                                    <li><i class="bi bi-check-square-fill"></i> It reduces the need for multiple
+                                        currencies and streamlines the user experience.</li>
+                                    <li><i class="bi bi-check-square-fill"></i> Token holders can stake LBT tokens to
+                                        earn additional rewards and participate in the governance of the platform.</li>
+                                    <li><i class="bi bi-check-square-fill"></i> This democratic approach empowers users
+                                        to have a say in the platform’s development and future.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- show case -->
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide2.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title">Liberte <br> <span>Job Portal</span></h2>
+            <h3 class="showcase__sub-title">Unlock your boundless potential and ignite your career with our exceptional
+                job matching platform. With just a few effortless clicks, seize multiple job opportunities that align
+                perfectly with your expertise and experience. Distinguish yourself from the competition and reign over
+                your professional growth by joining us today. </h3>
+
+            <a href="https://mainnet.projectliberte.io/jobportal.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://drive.google.com/file/d/1BTmBEzg3PsY-WQJFkT5QuANF_daM2SMn/preview">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide3.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title">Liberte <br> <span>Walk & Earn</span></h2>
+            <h3 class="showcase__sub-title">Welcome to the future of fitness with Liberte App! Earn points for physical
+                activities and get personalized guidance. With advanced GPS tracking and notifications of optimal
+                weather/crowds, our app has distinctive features like distance, pace, heart rate, maps, and more. Plus,
+                our cutting-edge AI-based features include automated fitness assessment and injury prevention. Join us
+                today and experience the ultimate fitness companion for a healthier lifestyle.</h3>
+
+            <a href="https://mainnet.projectliberte.io/WalkandEarn.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton" href="https://mainnet.projectliberte.io/assets/video/w.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide4.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte <br> <span>Play & Earn</span></h2>
+            <h3 class="showcase__sub-title">Introducing "GameGain Arena," where entertainment meets rewards. Our
+                platform offers an engaging gaming experience that allows users to earn while they play. By combining
+                fun and financial incentives, we create a thriving ecosystem that benefits our users, the platform, and
+                the community.
+            </h3>
+
+            <a href="https://mainnet.projectliberte.io/playandearn.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://mainnet.projectliberte.io/assets/video/play.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide5.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte <br> <span>Freelance</span></h2>
+            <h3 class="showcase__sub-title">Welcome to Liberte Freelance, the ultimate platform for exceptional talent.
+                Our advanced AI and machine learning technology connect businesses and individuals with skilled
+                freelancers, all with a user-friendly interface, 24/7 accessibility, advanced verification, and
+                promotional features. Join the dynamic, cutting-edge solution for the digital age and experience the
+                future of freelancing today.
+            </h3>
+
+            <a href="https://mainnet.projectliberte.io/Freelance.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://mainnet.projectliberte.io/assets/video/freelance.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide6.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte <br> <span>TradeSphere </span></h2>
+            <h3 class="showcase__sub-title">Presenting "TradeSphere," a pioneering buy-and-sell platform within Project
+                Liberte. TradeSphere streamlines commerce, enabling users to securely exchange goods and services,
+                ultimately enriching their financial experiences</h3>
+
+            <a href="https://mainnet.projectliberte.io/BuyandSell.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://mainnet.projectliberte.io/assets/video/buy.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide7.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte<br> <span> QR code</span></h2>
+            <h3 class="showcase__sub-title">Discover SyncQR, a groundbreaking technology that revolutionizes the way we
+                interact socially. SyncQR utilizes advanced QR code and Bluetooth capabilities to effortlessly sync and
+                exchange data between users. Transform your social experiences by embracing this innovative, secure, and
+                user-friendly solution, creating seamless connections in the digital world.
+            </h3>
+
+            <a href="https://mainnet.projectliberte.io/BuyandSell.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton" href="https://mainnet.projectliberte.io/assets/video/qr.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide8.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte <br> <span> AI Investment</span></h2>
+            <h3 class="showcase__sub-title">Introducing AI-Driven SmartStake, an amazing platform designed to redifine
+                your investment experience. Utilizing the power of AI and advanced investment strategies, SmartStake
+                enables users to optimize returns and unleash the true potential of their assets. Discover a safe,
+                tailored, and intuitive solution to expand your wealth and craft your financial destiny.
+            </h3>
+
+            <a href="https://mainnet.projectliberte.io/Aiinvestment.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://mainnet.projectliberte.io/assets/video/stock.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide9.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte <br> <span> NFT Market </span></h2>
+            <h3 class="showcase__sub-title">ArtChain is a cutting-edge platform that offers a secure and efficient
+                ecosystem for NFTs and digital art. With its advanced blockchain technology and AI algorithms, ArtChain
+                ensures authenticity and eliminates the risk of fraud, while its decentralized storage and smart
+                contracts provide a seamless trading experience. In addition, ArtChain offers an NFT marketplace for
+                creators and collectors, as well as a mining feature that allows anyone to earn rewards for
+                participating in the platform.
+            </h3>
+
+            <a href="https://mainnet.projectliberte.io/nftmarketplace.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://mainnet.projectliberte.io/assets/video/nft.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide10.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte <br> <span> Refer & Earn </span></h2>
+            <h3 class="showcase__sub-title">Introducing FriendBoost: Project Liberte's Unique Referral Program Discover
+                Project Liberte's Rewarding Connections, an AI-driven referral program that offers personalized
+                financial solutions. Expand your network, earn rewards, and experience the future of referral programs
+                while promoting a platform tailored to diverse financial needs. Transform your financial journey with
+                Rewarding Connections today.
+            </h3>
+
+            <a href="https://mainnet.projectliberte.io/referandearn.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://mainnet.projectliberte.io/assets/video/reffer.mp4">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+
+    </div>
+
+    <div class="showcase__content">
+        <div class="showcase__image">
+            <img src="{% static 'image/slide11.png' %}" alt="">
+        </div>
+        <div class="showcase__info">
+            <h2 class="showcase__title ">Liberte <br> <span>Social Media Platform </span></h2>
+            <h3 class="showcase__sub-title">Introducing SocioRev - the revolutionary social media platform. Utilizing
+                advanced AI and machine learning, SocioRev offers a personalized experience with dynamic content feeds,
+                intelligent recommendations, and real-time sentiment analysis. Prioritizing privacy and security,
+                SocioRev provides a safe and trusted social environment.
+            </h3>
+
+            <a href="https://mainnet.projectliberte.io/Socialmedia.php"
+                class="wc-btn-pink btn-hover btn-item"><span></span> Read <br>All Details <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <a class="popup-youtube metaportal_fn_videobutton"
+            href="https://drive.google.com/file/d/1k_FSprVrJORMD9Dq7CPXyJMNNQPtKV4M/preview">
+            <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+        </a>
+    </div>
+
+    </div>
+    <!-- /show case -->
+
+    <div class="gap"></div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_header text-center">
+                        <h2>Liberte Treasures</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider -->
+            <div class="fn_cs_slider" data-responsive="on">
+                <div class="slider_top">
+                    <img src="{% static 'image/1x1.jpg' %}" alt="">
+                    <ul>
+                        <li class="prev" data-index="1">
+                            <div class="item has_video">
+                                <img src="{% static 'image/1x1.jpg' %}" alt="">
+                                <div class="play_video_slider">
+                                    <a class="popup-youtube metaportal_fn_videobutton"
+                                        href="https://drive.google.com/file/d/1w3wIAD3TsFk8NdgjdI7-Yz4Q6AKi6hoO/preview">
+                                        <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+                                    </a>
+                                </div>
+                                <div class="item_in">
+                                    <div class="img" data-bg-img="{% static 'image/slider/1.png' %}"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="active" data-index="2">
+                            <div class="item has_video">
+                                <img src="{% static 'image/1x1.jpg' %}" alt="">
+                                <div class="play_video_slider">
+                                    <a class="popup-youtube metaportal_fn_videobutton"
+                                        href="https://drive.google.com/file/d/1O0g7Z4KMx70Kx1wZl4J3Aulj6TsDvuza/preview">
+                                        <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+                                    </a>
+                                </div>
+                                <div class="item_in">
+                                    <div class="img" data-bg-img="{% static 'image/slider/2.png' %}"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="next" data-index="3">
+                            <div class="item has_video">
+                                <img src="{% static 'image/1x1.jpg' %}" alt="">
+                                <div class="play_video_slider">
+                                    <a class="popup-youtube metaportal_fn_videobutton"
+                                        href="https://drive.google.com/file/d/1k_FSprVrJORMD9Dq7CPXyJMNNQPtKV4M/preview">
+                                        <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+                                    </a>
+                                </div>
+                                <div class="item_in">
+                                    <div class="img" data-bg-img="{% static 'image/slider/3.png' %}"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="next2" data-index="4">
+                            <div class="item has_video">
+                                <img src="{% static 'image/1x1.jpg' %}" alt="">
+                                <div class="play_video_slider">
+                                    <a class="popup-youtube metaportal_fn_videobutton"
+                                        href="https://drive.google.com/file/d/1BTmBEzg3PsY-WQJFkT5QuANF_daM2SMn/preview">
+                                        <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+                                    </a>
+                                </div>
+                                <div class="item_in">
+                                    <div class="img" data-bg-img="{% static 'image/slider/4.png' %}"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-index="5">
+                            <div class="item has_video">
+                                <img src="{% static 'image/1x1.jpg' %}" alt="">
+                                <div class="play_video_slider">
+                                    <a class="popup-youtube metaportal_fn_videobutton"
+                                        href="https://drive.google.com/file/d/1mNFUGkaOmRFOa9pr6SXk30q7HV1Y8qmN/preview">
+                                        <img src="{% static 'image/play.png' %}" alt="" class="fn__svg">
+                                    </a>
+                                </div>
+                                <div class="item_in">
+                                    <div class="img" data-bg-img="{% static 'image/slider/5.png' %}"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slider_nav">
+                    <a href="#" class="prev">
+                        <span class="circle"></span>
+                        <span class="icon"><img src="{% static 'image/down-arrow.png' %}" alt="" class="fn__svg"></span>
+                        <span class="circle"></span>
+                    </a>
+                    <a href="#" class="next">
+                        <span class="circle"></span>
+                        <span class="icon"><img src="{% static 'image/down-arrow.png' %}" alt="" class="fn__svg"></span>
+                        <span class="circle"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- !Slider -->
+
+            <!-- Description -->
+            <div class="fn_cs_desc">
+                <p>
+                    The Liberte Collections are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS.
+                </p>
+
+                <div class="princess">
+                    <button type="button" fdprocessedid="i3vz2s">View Details</button>
+                </div>
+            </div>
+            <!-- !Description -->
+
+        </div>
+    </section>
+    <!-- !Home Section -->
+
+    <hr class="m-0">
+
+    <!-- Page Footer -->
+    <footer class="footer__area">
+        <div class="footer__btm">
+            <div class="container">
+                <div class="row footer__row">
+                    <div class="col footer__inner">
+                        <div class="footer__widget">
+                            <h2 class="footer__widget-title">Who We Are</h2>
+                            <ul class="footer__link">
+                                <li><a href="#">Message From CEO</a></li>
+                                <li><a href="#"> Brand Symbol </a></li>
+                                <li><a href="#">Corporate Phylosophy</a></li>
+                                <li><a href="#"> Company Profile </a></li>
+                                <li><a href="#">Management Team</a></li>
+                                <li><a href="#">Organization</a></li>
+                                <li><a href="#">Global Vision III</a></li>
+                                <li><a href="#"> Brand Statement</a></li>
+                                <li><a href="#">Our Name Liberte</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="footer__widget-2">
+                            <h2 class="footer__widget-title">Our Group</h2>
+                            <ul class="footer__link">
+                                <li><a href="#">Butinah</a></li>
+                                <li><a href="#"> Elite </a></li>
+                                <li><a href="#">Liberte</a></li>
+                            </ul>
+                            <h2 class="footer__widget-title">Investor</h2>
+                            <ul class="footer__link">
+                                <li><a href="">Message to Stakeholders</a></li>
+                                <li><a href="">New Investor</a></li>
+                                <li><a href="">Financial Results Related Materials</a></li>
+                                <li><a href="#">Inquiry Form</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="footer__widget-3">
+                            <h2 class="footer__widget-title">News &amp; Resources</h2>
+                            <ul class="footer__link">
+                                <li><a href="#">Notice</a></li>
+                                <li><a href="#"> News </a></li>
+                                <li><a href="blog.php">Blogs</a></li>
+                            </ul>
+                            <h2 class="footer__widget-title">Documents</h2>
+                            <ul class="footer__link">
+                                <li><a href="">Whitepaper</a></li>
+                                <li><a href="">FAQs</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="#">Term &amp; Conditions</a></li>
+                                <li><a href="#">Disclosure Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="footer__widget-4">
+                            <h2 class="footer__widget-title">Features</h2>
+                            <ul class="footer__link">
+                                <li><a href="LifeInsurance.php">Life Insurance</a></li>
+                                <li><a href="WalkandEarn.php"> Walk &amp; Earn </a></li>
+                                <li><a href="#">Play &amp; Earn</a></li>
+                                <li><a href="jobportal.php"> Job Portal </a></li>
+                                <li><a href="BuyandSell.php">Buy &amp; Sell</a></li>
+                                <li><a href="Freelance.php">Freelancing</a></li>
+                                <li><a href="#">NFT Marketplace</a></li>
+                                <li><a href="#">Staking</a></li>
+                                <li><a href="#">QR Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <style>
+                        /* General styling for the AI-tech feel */
+                        .ai-tech-style {
+                            background-color: #1e1e1e;
+                            padding: 20px;
+                            border-radius: 10px;
+                            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2), inset 0 0 15px rgba(0, 255, 255, 0.1);
+                            text-align: center;
+                            font-family: 'Orbitron', sans-serif;
+                            position: relative;
+                            /* Allow absolute positioning of children */
+                        }
+
+                        .ai-tech-style p {
+                            color: #00ffff;
+                            font-size: 1.2rem;
+                            letter-spacing: 2px;
+                            margin-bottom: 10px;
+                            text-transform: uppercase;
+                            position: relative;
+                            /* Allow positioning of the dot relative to the text */
+                        }
+
+                        /* Adjusting the dot's position and size */
+                        .live-dot {
+                            color: #00ff00;
+                            /* Bright green color */
+                            font-size: 0.8rem;
+                            /* Smaller size */
+                            position: absolute;
+                            top: -10px;
+                            /* Adjust to move it up */
+                            right: -10px;
+                            /* Adjust to move it to the right */
+                            animation: blink 1s infinite;
+                        }
+
+                        /* Blink animation for the green dot */
+                        @keyframes blink {
+
+                            0%,
+                            50% {
+                                opacity: 1;
+                            }
+
+                            50%,
+                            100% {
+                                opacity: 0;
+                            }
+                        }
+
+                        .ai-tech-style h2 {
+                            font-size: 3rem;
+                            color: #ffffff;
+                            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.4);
+                            transition: transform 0.3s ease-in-out;
+                        }
+
+                        /* Glow effect for the visitor count number */
+                        .ai-tech-style h2::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 120%;
+                            height: 120%;
+                            background: rgba(0, 255, 255, 0.2);
+                            filter: blur(30px);
+                            z-index: -1;
+                        }
+
+                        /* Animation for the visitor count number */
+                        .ai-tech-style h2 {
+                            animation: count-animation 2s ease-in-out infinite;
+                        }
+
+                        @keyframes count-animation {
+
+                            0%,
+                            100% {
+                                transform: scale(1) rotate(0deg);
+                            }
+
+                            50% {
+                                transform: scale(1.1) rotate(10deg);
+                            }
+                        }
+                    </style>
+
+                    <div class="col">
+                        <div class="liveCounter ai-tech-style">
+                            <p>Visitor Count <i class="bi bi-circle-fill live-dot"></i> </p>
+                            <h2 id="visitorCount">0</h2>
+                        </div>
+                    </div>
+
+
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            let counterElement = document.getElementById('visitorCount');
+                            let intervals = [13000, 15000, 12000, 17000]; // 3s, 5s, 2s, 7s
+                            let index = 0;
+
+                            function updateCounter() {
+                                // Generate a random number between 1 and 9
+                                let randomIncrement = Math.floor(Math.random() * 5) + 1;
+
+                                fetch('{% url "update_visitor_count" %}')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        let currentCount = parseInt(data.count);
+                                        counterElement.textContent = currentCount + randomIncrement;
+
+                                        // Update the visitor count in the backend
+                                        fetch('{% url "update_visitor_count_increment" %}', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                                'X-CSRFToken': '{{ csrf_token }}'
+                                            },
+                                            body: JSON.stringify({
+                                                increment: randomIncrement
+                                            })
+                                        });
+                                    });
+
+                                setTimeout(updateCounter, intervals[index]);
+                                index = (index + 1) % intervals.length; // Loop through intervals
+                            }
+
+                            updateCounter(); // Initial call to start the loop
+                        });
+                    </script>
+
+
+
+
+                    <ul class="footerSocial">
+                        <li>
+                            <a href="https://www.instagram.com/projectliberteofficial" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.facebook.com/projectliberteofficial" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/projectliberteofficial" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://discord.gg/ACBFk6MwK6 " target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-discord" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-telegram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tiktok.com/@projectliberteofficial" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-tiktok" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-pinterest" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Page Ofcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img src="{% static 'image/logo.png' %}" alt=""></h5>
+            <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                    class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="ofcanvas_data">
+                <h5>Who we are</h5>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestiae vel sed nulla, id nemo,
+                    qui, nihil dolores minima soluta impedit? Natus harum voluptates ipsam accusamus eius vitae, odit
+                    culpa libero eaque, provident consequuntur?
+                </p>
+            </div>
+            <div class="offcanvas_buttom">
+                <h5>Follow us social media</h5>
+                <ul>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="joinLiberte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class=" modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Join Liberte</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body joinModal">
+                    <h5>Welcome! You're applicant <span>#93,721</span>.</h5>
+                    <p>Due to an overwhelming response, we aren't able to enrol you immediately. However, we would love
+                        for you to join our waiting list!</p>
+                    <p>As a token of our appreciation for your patience, selected approved Libertarians will receive a
+                        starting reward of 500 LBT.</p>
+                    <p>To join the waiting list, kindly fill out the form below.</p>
+
+                    <form class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="exampleInputEmail1" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="exampleInputPassword1" class="form-label">Email:</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="exampleInputPassword1" class="form-label">Mobile:</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="exampleInputPassword1" class="form-label">*Referral Code:</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn" data-bs-toggle="modal"
+                                data-bs-target="#joinLiberte2">Submit</button>
+                        </div>
+                    </form>
+                    <div class="getItOn row">
+                        <div class="col-md-5 my-auto">
+                            <h4>Download Liberte App</h4>
+                        </div>
+                        <div class="col-md-7 my-auto">
+                            <a href="#">
+                                <img src="{%static 'images/google.jpg' %}" height="55" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="{%static 'images/apple.jpg' %}" height="55" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p> <span>*Note:</span> Having a referral code prioritizes your application. Obtain one from our
+                        mobile application's 'Refer & Earn' section.</p>
+                    <p>Thank you for your interest. We will notify you as soon as possible about the outcome of your
+                        application."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page All Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/chat.js' %}"></script>
+    <script src="{% static 'js/card-slider.js' %}"></script>
+    <script src="{% static 'js/video-player.js' %}"></script>
+    <script>
+        $('.btn-hover').on('mouseenter', function (e) {
+            var x = e.pageX - $(this).offset().left;
+            var y = e.pageY - $(this).offset().top;
+
+            $(this).find('span').css({
+                top: y,
+                left: x
+            });
+        });
+
+        $('.btn-hover').on('mouseout', function (e) {
+            var x = e.pageX - $(this).offset().left;
+            var y = e.pageY - $(this).offset().top;
+
+            $(this).find('span').css({
+                top: y,
+                left: x
+            });
+        });
+
+        const all_btns = gsap.utils.toArray(".btn_wrapper");
+        if (all_btns.length > 0) {
+            var all_btn = gsap.utils.toArray(".btn_wrapper");
+        } else {
+            var all_btn = gsap.utils.toArray("#btn_wrapper");
+        }
+        const all_btn_cirlce = gsap.utils.toArray(".btn-item");
+        all_btn.forEach((btn, i) => {
+            $(btn).mousemove(function (e) {
+                callParallax(e);
+            });
+
+            function callParallax(e) {
+                parallaxIt(e, all_btn_cirlce[i], 80);
+            }
+
+            function parallaxIt(e, target, movement) {
+                var $this = $(btn);
+                var relX = e.pageX - $this.offset().left;
+                var relY = e.pageY - $this.offset().top;
+
+                gsap.to(target, 0.5, {
+                    x: ((relX - $this.width() / 2) / $this.width()) * movement,
+                    y: ((relY - $this.height() / 2) / $this.height()) * movement,
+                    ease: Power2.easeOut,
+                });
+            }
+            $(btn).mouseleave(function (e) {
+                gsap.to(all_btn_cirlce[i], 0.5, {
+                    x: 0,
+                    y: 0,
+                    ease: Power2.easeOut,
+                });
+            });
+        });
+
+        var showcase_list = document.querySelectorAll(".showcase__content");
+        showcase_list.forEach((showcase, index) => {
+            gsap.to(showcase, {
+                scrollTrigger: {
+                    trigger: showcase,
+                    pin: showcase,
+                    pinSpacing: false,
+                    start: "top top",
+                    end: index === showcase_list.length - 1 ? "top top" : "bottom top",
+                    delay: 1,
+                    scrub: true,
+                    markers: false
+                }
+            });
+        });
+
+        $("#open_offcanvas").click(function () {
+            $(".header__nav-2").toggle();
+        });
+
+        $(window).on("load", function () {
+            $('body').addClass('loaded');
+        });
+    </script>
+</body>
+
+</html>
