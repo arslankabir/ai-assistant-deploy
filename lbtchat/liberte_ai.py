@@ -11,6 +11,8 @@ from . import constants
 # Set the OpenAI API key
 os.environ["OPENAI_API_KEY"] = constants.APIKEY
 
+import nltk
+nltk.data.path.append('/var/www/liberte/ai-assistant-deploy/nltk_data')
 
 # Determine the data directory path
 DATA_DIR = os.path.join(settings.BASE_DIR, 'lbtchat', 'data')
